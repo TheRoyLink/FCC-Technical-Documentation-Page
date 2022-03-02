@@ -1,6 +1,15 @@
+html,
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
 div.main-body {
   display: grid;
-  grid-template-columns: minmax(300px, auto) 1fr;
+  grid-template-columns: minmax(350px, auto) 1fr;
   grid-template-areas: "navbar mainContent";
   grid-gap: 30px;
   padding: 0px;
@@ -36,4 +45,36 @@ main#main-doc {
 header {
   font-size: 1.5em;
   font-weight: bold;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 750px) {
+  div.main-body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "mainContent";
+  }
+
+  nav#navbar {
+    position: inherit;
+  }
 }
